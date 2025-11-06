@@ -1,0 +1,461 @@
+/* base_style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #505050, #ff8c00, #ffffff);
+    min-height: 100vh;
+    padding: 40px 20px;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('pic.png');
+    background-size: 80px 80px;
+    background-position: 40px 40px;
+    background-repeat: repeat;
+    opacity: 0.08;
+    z-index: -1;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    color: #444;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+}
+
+.leagues-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.league-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+    border: 2px solid #505050;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    height: 100%;
+    min-height: 380px;
+    max-width: 280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    aspect-ratio: 2/3;
+}
+
+.league-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.league-card.w-ligue {
+    border-top: 6px solid #ff8c00;
+}
+
+.league-card.w-ligue:hover {
+    border: 2px solid #ff8c00;
+}
+
+.league-card.league-a {
+    border-top: 6px solid #8B0000;
+}
+
+.league-card.league-a:hover {
+    border: 2px solid #8B0000;
+}
+
+.league-card.league-b {
+    border-top: 6px solid #1e3d59;
+}
+
+.league-card.league-b:hover {
+    border: 2px solid #1e3d59;
+}
+
+.league-card.mlbl {
+    border-top: 6px solid #0086c9;
+}
+
+.league-card.mlbl:hover {
+    border: 2px solid #0086c9;
+}
+
+.league-name {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.league-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.league-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.w-ligue .league-icon {
+    color: #ff8c00;
+}
+
+.league-a .league-icon {
+    color: #8B0000;
+}
+
+.league-b .league-icon {
+    color: #1e3d59;
+}
+
+.mlbl .league-icon {
+    color: #0086c9;
+}
+
+/* Стили для сводного расписания */
+.combined-schedule-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #eee;
+}
+
+.combined-schedule-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+/* Стили карточек игр (как на страницах лиг) */
+.games-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.game-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-left: 5px solid #ccc;
+}
+
+.game-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.game-info {
+    flex: 1;
+}
+
+.game-date {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.teams {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.team {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.vs {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.location {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.score, .score-placeholder {
+    font-size: 1.3em;
+    font-weight: 700;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: #f5f5f5;
+    min-width: 80px;
+    text-align: center;
+}
+
+.score-placeholder {
+    color: #999;
+    font-weight: 500;
+}
+
+.clickable-score {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.clickable-score:hover {
+    background: #e9e9e9;
+    transform: scale(1.05);
+}
+
+/* Цвета карточек игр - соответствующие цветам лиг */
+.game-card.wligue-game {
+    border-left: 5px solid #ff8c00; /* Рыжий для W-LIGUE */
+    background-color: rgba(128, 20, 128, 0.4); /* фиолетовый с 10% прозрачностью */
+	background-color: hsl(30, 30%, 90%);
+}
+
+.game-card.league-a-game {
+    border-left: 5px solid #8B0000; /* Красный для Лиги А */
+	background-color: hsl(0, 30%, 90%);
+}
+
+.game-card.league-b-game {
+    border-left: 5px solid #1e3d59; /* Синий для Лиги Б */
+	background-color: hsl(240, 30%,90%);
+}
+
+.game-card.mlbl-game {
+    border-left: 5px solid #0086c9; /* Голубой для МЛБЛ */
+	background-color: hsl(195, 30%, 90%);
+}
+
+/* Стили для архивных игр */
+.old-game {
+    opacity: 0.7;
+    background: rgba(245, 245, 245, 0.9);
+}
+
+.old-game:hover {
+    opacity: 0.9;
+}
+
+.archive-section {
+    margin-bottom: 30px;	
+}
+
+.archive-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.archive-header:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.archive-title {
+    color: #666;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.archive-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #666;
+}
+
+.archive-content {
+    transition: all 0.3s ease;
+}
+
+/* Адаптивность для карточек игр */
+@media (max-width: 768px) {
+    .game-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .score, .score-placeholder {
+        align-self: flex-end;
+    }
+    
+    .games-list {
+        gap: 12px;
+    }
+}
+
+/* Планшеты и маленькие ноутбуки */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+    
+    .leagues-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .league-card {
+        min-height: 350px;
+        max-width: 300px;
+        padding: 35px 25px;
+    }
+    
+    .league-name {
+        font-size: 2rem;
+    }
+    
+    .league-description {
+        font-size: 1.1rem;
+    }
+    
+    .league-icon {
+        font-size: 2.8rem;
+    }
+}
+
+/* Планшеты (портрет) */
+@media (max-width: 768px) {
+    .leagues-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .main-title {
+        font-size: 3rem;
+    }
+    
+    .subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .league-card {
+        min-height: 320px;
+        max-width: 100%;
+        padding: 30px 25px;
+        aspect-ratio: unset;
+    }
+    
+    .league-name {
+        font-size: 2.2rem;
+    }
+    
+    .league-description {
+        font-size: 1.1rem;
+    }
+    
+    .league-icon {
+        font-size: 3rem;
+    }
+    
+    body::before {
+        background-size: 80px 80px;
+        background-position: 50px 50px;
+    }
+}
+
+/* Мобильные */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 10px;
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .league-card {
+        min-height: 280px;
+        padding: 25px 20px;
+    }
+    
+    .league-name {
+        font-size: 2rem;
+    }
+    
+    .league-description {
+        font-size: 1rem;
+    }
+    
+    .league-icon {
+        font-size: 2.5rem;
+    }
+    
+    .game-card {
+        padding: 15px;
+    }
+    
+    .score, .score-placeholder {
+        min-width: 70px;
+        font-size: 1.1em;
+    }
+}

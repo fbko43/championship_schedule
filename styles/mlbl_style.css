@@ -1,0 +1,530 @@
+/* mlbl_style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0086c9;
+    min-height: 100vh;
+    padding: 40px 20px;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('pic.png');
+    background-size: 80px 80px;
+    background-position: 40px 40px;
+    background-repeat: repeat;
+    opacity: 0.08;
+    z-index: -1;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Контейнер для кнопок навигации */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.back-button {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.9);
+    color: #0086c9;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.back-button:hover {
+    background: #0086c9;
+    color: white;
+    border: 2px solid white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+/* Кнопка турнирной таблицы */
+.table-button {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.9);
+    color: #0086c9;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-left: auto;
+}
+
+.table-button:hover {
+    background: #0086c9;
+    color: white;
+    border: 2px solid white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.games-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.game-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #e04e25;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.game-info {
+    flex: 1;
+}
+
+.game-date {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.teams {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0086c9;
+    margin-bottom: 8px;
+}
+
+.vs {
+    color: #e04e25;
+    margin: 0 10px;
+}
+
+.location {
+    color: #666;
+    font-size: 1.1rem;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.score {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #0086c9;
+    text-align: center;
+    min-width: 180px;
+    padding: 15px;
+    background: rgba(224, 78, 37, 0.2);
+    border-radius: 10px;
+    border: 3px solid #e04e25;
+    margin-left: 20px;
+}
+
+.score-placeholder {
+    font-size: 1.2rem;
+    color: #999;
+    font-weight: 500;
+}
+
+/* Ссылка на протокол */
+.protocol-link {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #eee;
+}
+
+.protocol-link a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.protocol-link a:hover {
+    color: #e04e25;
+}
+
+/* Улучшенный архив - вся плашка кликабельна */
+.archive-section {
+    margin-bottom: 40px;
+}
+
+.archive-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.archive-header:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.archive-title {
+    color: #fff;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.archive-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    pointer-events: none;
+}
+
+.archive-header:hover .archive-toggle {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.archive-content {
+    transition: all 0.3s ease;
+}
+
+/* Старые игры */
+.old-game {
+    opacity: 0.7;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.old-game:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Кликабельный счет */
+.score-link {
+    text-decoration: none;
+    display: block;
+}
+
+.clickable-score {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.score-link:hover .clickable-score,
+.clickable-score:hover {
+    background: rgba(224, 78, 37, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.clickable-score::after {
+    content: "🔗";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* Стили для матричной таблицы с фиксированными заголовками */
+.matrix-table-section {
+    margin-top: 60px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.matrix-title {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 2rem;
+}
+
+.matrix-container {
+    overflow-x: auto;
+    position: relative;
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.matrix-table th,
+.matrix-table td {
+    padding: 10px 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.matrix-table th {
+    background: #505050;
+    color: white;
+    font-weight: bold;
+}
+
+/* Фиксированные заголовки */
+.matrix-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 15;
+}
+
+.matrix-table .corner-header {
+    background: #333 !important;
+    min-width: 120px;
+    position: sticky;
+    left: 0;
+    z-index: 20;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.matrix-table .team-header {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    white-space: nowrap;
+    height: 150px;
+    min-width: 40px;
+    max-width: 40px;
+    vertical-align: bottom;
+    padding: 5px 3px;
+    font-size: 12px;
+    line-height: 1.2;
+    transform: none; /* Убираем rotate(180deg) */
+}
+
+.team-header:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    z-index: 100;
+}
+
+.points-header {
+    background: #666;
+    min-width: 60px;
+}
+
+/* Фиксированный первый столбец */
+.matrix-table .row-header {
+    background: #f5f5f5;
+    font-weight: bold;
+    text-align: left;
+    min-width: 120px;
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    background: #f5f5f5;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.diagonal-cell {
+    background: #f0f0f0;
+    color: #999;
+}
+
+.score-cell {
+    min-width: 90px;
+    font-size: 0.9rem;
+}
+
+.points-cell {
+    background: #e8f5e8;
+    font-weight: bold;
+    min-width: 60px;
+    color: #2e7d32;
+}
+
+/* Улучшение читаемости строк */
+.matrix-table tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.matrix-table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.matrix-legend {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .navigation-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .table-button {
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .archive-header {
+        padding: 12px 15px;
+    }
+    
+    .archive-title {
+        font-size: 1.5rem;
+    }
+    
+    .matrix-table-section {
+        padding: 20px 15px;
+        margin-top: 40px;
+    }
+    
+    .matrix-title {
+        font-size: 1.6rem;
+    }
+    
+    .matrix-table th,
+    .matrix-table td {
+        padding: 6px 4px;
+        font-size: 0.8rem;
+    }
+    
+    .team-header {
+        min-width: 80px;
+        height: 120px;
+        font-size: 0.8rem;
+    }
+    
+    .row-header {
+        min-width: 100px;
+        font-size: 0.8rem;
+    }
+    
+    .score-cell {
+        min-width: 70px;
+        font-size: 0.8rem;
+    }
+    
+    .main-title {
+        font-size: 3rem;
+    }
+    
+    .subtitle {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .teams {
+        font-size: 1.4rem;
+    }
+    
+    .game-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .score {
+        margin-left: 0;
+        margin-top: 15px;
+        min-width: 100%;
+        font-size: 2.5rem;
+    }
+    
+    body::before {
+        background-size: 80px 80px;
+        background-position: 50px 50px;
+    }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}}</title>
+    <link rel="stylesheet" href="{{CSS_FILE}}">
+</head>
+<body>
+    <div class="container">
+        <!-- Новый контейнер для кнопок навигации -->
+        <div class="navigation-buttons">
+            {{BACK_BUTTON}}
+            {{TABLE_BUTTON}}
+        </div>
+        
+        <div class="header">
+            <h1 class="main-title">{{TITLE}}</h1>
+            <h2 class="subtitle">{{SCHEDULE_TITLE}}</h2>
+        </div>
+        
+        {{GAMES_LIST}}
+        
+        <!-- Добавляем якорь для турнирной таблицы -->
+        <div id="tournament-table"></div>
+        {{TOURNAMENT_TABLE}}
+    </div>
+</body>
+</html>

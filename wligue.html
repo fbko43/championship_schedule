@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W-LIGUE</title>
+    <link rel="stylesheet" href="styles/wligue_style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Новый контейнер для кнопок навигации -->
+        <div class="navigation-buttons">
+            <a href="index.html" class="back-button">← Назад к выбору лиг</a>
+            <a href="#tournament-table" class="table-button wligue-table-button">Турнирная таблица ↓</a>
+        </div>
+        
+        <div class="header">
+            <h1 class="main-title">W-LIGUE</h1>
+            <h2 class="subtitle">Расписание</h2>
+        </div>
+        
+        <div class="games-list">
+        <div class="archive-section">
+            <div class="archive-header">
+                <h3 class="archive-title">Архив прошедших игр</h3>
+                <button class="archive-toggle">▶</button>
+            </div>
+            <div class="archive-content" id="archiveContent">
+                
+    <div class="game-card old-game">
+        <div class="game-info">
+            <div class="game-date">12.10 14:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">Вятка</span>
+                <span class="vs">vs</span>
+                <span class="team">Весна 45</span>
+            </div>
+            <div class="location">Солнечная 13 (КСК)</div>
+        </div>
+        <a href="https://drive.google.com/file/d/1kSRka7nGjsA8LBNbPEsJcBbT2dv6P8_3/view?usp=sharing" target="_blank" class="score-link"><div class="score clickable-score">64-80</div></a>
+    </div>
+    
+    <div class="game-card old-game">
+        <div class="game-info">
+            <div class="game-date">12.10 19:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">Родина</span>
+                <span class="vs">vs</span>
+                <span class="team">ВГУ-2</span>
+            </div>
+            <div class="location">Орловская 12 (УСК)</div>
+        </div>
+        <div class="score">20-85</div>
+    </div>
+    
+    <div class="game-card old-game">
+        <div class="game-info">
+            <div class="game-date">19.10 17:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">Родина</span>
+                <span class="vs">vs</span>
+                <span class="team">Форс-Мажор</span>
+            </div>
+            <div class="location">Пр-т Гагарина 27 (Слободской) (Красный Якорь)</div>
+        </div>
+        <div class="score">30-91</div>
+    </div>
+    
+    <div class="game-card old-game">
+        <div class="game-info">
+            <div class="game-date">19.10 17:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">ВГУ-Пушка</span>
+                <span class="vs">vs</span>
+                <span class="team">Вятка</span>
+            </div>
+            <div class="location">Орловская 12 (УСК)</div>
+        </div>
+        <div class="score">82-41</div>
+    </div>
+    
+    <div class="game-card old-game">
+        <div class="game-info">
+            <div class="game-date">19.10 19:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">Весна 45</span>
+                <span class="vs">vs</span>
+                <span class="team">ВГУ-2</span>
+            </div>
+            <div class="location">Орловская 12 (УСК)</div>
+        </div>
+        <div class="score">70-60</div>
+    </div>
+    
+    <div class="game-card old-game">
+        <div class="game-info">
+            <div class="game-date">26.10 14:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">Вятка</span>
+                <span class="vs">vs</span>
+                <span class="team">Родина</span>
+            </div>
+            <div class="location">Солнечная 13 (КСК)</div>
+        </div>
+        <div class="score">39-27</div>
+    </div>
+    
+    <div class="game-card old-game">
+        <div class="game-info">
+            <div class="game-date">26.10 19:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">ВГУ-2</span>
+                <span class="vs">vs</span>
+                <span class="team">Форс-Мажор</span>
+            </div>
+            <div class="location">Пр-т Гагарина 27 (Слободской) (Красный Якорь)</div>
+        </div>
+        <div class="score">50-64</div>
+    </div>
+    
+            </div>
+        </div>
+        
+    <div class="game-card">
+        <div class="game-info">
+            <div class="game-date">08.11 14:30 (суббота)</div>
+            <div class="teams">
+                <span class="team">Родина</span>
+                <span class="vs">vs</span>
+                <span class="team">Весна 45</span>
+            </div>
+            <div class="location">Октябрьский пр-т 133 (ВГАТУ)</div>
+        </div>
+        <div class="score-placeholder">Скоро</div>
+    </div>
+    </div>
+    <script>
+        // Делаем всю плашку архива кликабельной
+        document.addEventListener('DOMContentLoaded', function() {
+            const archiveHeader = document.querySelector('.archive-header');
+            const content = document.getElementById('archiveContent');
+            
+            if (archiveHeader && content) {
+                // По умолчанию архив свернут
+                content.style.display = 'none';
+                
+                // Вешаем обработчик на всю плашку
+                archiveHeader.addEventListener('click', function() {
+                    const toggle = this.querySelector('.archive-toggle');
+                    if (content.style.display === 'none') {
+                        content.style.display = 'block';
+                        toggle.textContent = '▼';
+                    } else {
+                        content.style.display = 'none';
+                        toggle.textContent = '▶';
+                    }
+                });
+            }
+        });
+    </script>
+    
+        
+        <!-- Добавляем якорь для турнирной таблицы -->
+        <div id="tournament-table"></div>
+        
+    <div class="matrix-table-section">
+        <h2 class="matrix-title">Турнирная таблица (матрица)</h2>
+        <div class="matrix-container">
+            <table class="matrix-table">
+    <thead><tr><th class="corner-header"></th><th class="team-header" title="ВГУ-2">ВГУ-2</th><th class="team-header" title="ВГУ-Пушка">ВГУ-Пушка</th><th class="team-header" title="Весна 45">Весна 45</th><th class="team-header" title="Вятка">Вятка</th><th class="team-header" title="Родина">Родина</th><th class="team-header" title="Форс-Мажор">Форс-Мажор</th><th class="points-header">Очки</th></tr></thead><tbody><tr><td class="row-header">ВГУ-2</td><td class="diagonal-cell">-</td><td class="score-cell">-</td><td class="score-cell">60:70 (1)</td><td class="score-cell">-</td><td class="score-cell"><strong>85:20 (2)</strong></td><td class="score-cell">50:64 (1)</td><td class="points-cell"><strong>4</strong></td></tr><tr><td class="row-header">ВГУ-Пушка</td><td class="score-cell">-</td><td class="diagonal-cell">-</td><td class="score-cell">-</td><td class="score-cell"><strong>82:41 (2)</strong></td><td class="score-cell">-</td><td class="score-cell">-</td><td class="points-cell"><strong>2</strong></td></tr><tr><td class="row-header">Весна 45</td><td class="score-cell"><strong>70:60 (2)</strong></td><td class="score-cell">-</td><td class="diagonal-cell">-</td><td class="score-cell"><strong>80:64 (2)</strong></td><td class="score-cell">-</td><td class="score-cell">-</td><td class="points-cell"><strong>4</strong></td></tr><tr><td class="row-header">Вятка</td><td class="score-cell">-</td><td class="score-cell">41:82 (1)</td><td class="score-cell">64:80 (1)</td><td class="diagonal-cell">-</td><td class="score-cell"><strong>39:27 (2)</strong></td><td class="score-cell">-</td><td class="points-cell"><strong>4</strong></td></tr><tr><td class="row-header">Родина</td><td class="score-cell">20:85 (1)</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">27:39 (1)</td><td class="diagonal-cell">-</td><td class="score-cell">30:91 (1)</td><td class="points-cell"><strong>3</strong></td></tr><tr><td class="row-header">Форс-Мажор</td><td class="score-cell"><strong>64:50 (2)</strong></td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell">-</td><td class="score-cell"><strong>91:30 (2)</strong></td><td class="diagonal-cell">-</td><td class="points-cell"><strong>4</strong></td></tr></tbody>
+            </table>
+        </div>
+        <div class="matrix-legend">
+            <p><strong>Обозначения:</strong> Счет (Очки) - в одной клетке отображаются все матчи между командами, очки суммируются</p>
+        </div>
+    </div>
+    
+    </div>
+</body>
+</html>

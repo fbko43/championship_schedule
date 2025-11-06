@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ФБКО</title>
+    <link rel="stylesheet" href="styles/base_style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">ФБКО</h1>
+            <h2 class="subtitle">Расписание и турнирные таблицы</h2>
+        </div>
+        
+        <div class="leagues-grid">
+            <a href="wligue.html" class="league-card w-ligue">
+                <div class="league-icon">🏆</div>
+                <h2 class="league-name">W-LIGUE</h2>
+                <p class="league-description">Женская баскетбольная лига с прекрасными командам, где каждая стремится к победе, а зрители наслаждаются яркими моментами. Эмоциональные матчи, красивая игра и неожиданные решения.</p>
+            </a>
+
+            <a href="religuea.html" class="league-card league-a">
+                <div class="league-icon">⚔️</div>
+                <h2 class="league-name">ЛИГА РАЗВИТИЯ (А)</h2>
+                <p class="league-description">Мужская лига с бойцовскими командами и упорной борьбой. Тактические дуэли, волевые качества и характер победителей.</p>
+            </a>
+
+            <a href="religueb.html" class="league-card league-b">
+                <div class="league-icon">🛡️</div>
+                <h2 class="league-name">ЛИГА РАЗВИТИЯ (Б)</h2>
+                <p class="league-description">Мужская лига с сильными командами и жесткой конкуренцией. Железная защита, быстрые контратаки и волевые победы.</p>
+            </a>
+			
+			<a href="mlbl.html" class="league-card mlbl"> 
+                <div class="league-icon">💙</div>
+                <h2 class="league-name">МЛБЛ</h2>
+                <p class="league-description">Всероссийские соревнования среди сильнейших любительских команд. Высокий уровень организации, профессиональный подход и бескомпромиссная борьба за чемпионство.</p>
+            </a>
+        </div>
+
+        <!-- Сводное расписание -->
+        <div class="combined-schedule-section">
+            <h2 class="combined-schedule-title">Сводное расписание всех лиг</h2>
+            
+        <div class="archive-section">
+            <div class="archive-header">
+                <h3 class="archive-title">Архив прошедших игр</h3>
+                <button class="archive-toggle">▶</button>
+            </div>
+            <div class="archive-content" id="archiveContent">
+                
+    <div class="game-card old-game mlbl-game">
+        <div class="game-info">
+            <div class="game-date">09.10 20:15 (четверг)</div>
+            <div class="teams">
+                <span class="team">ESTET</span>
+                <span class="vs">vs</span>
+                <span class="team">Чайка</span>
+            </div>
+            <div class="location">Солнечная 13 (КСК)</div>
+        </div>
+        <div class="score">65-74</div>
+    </div>
+    
+    <div class="game-card old-game league-a-game">
+        <div class="game-info">
+            <div class="game-date">11.10 13:00 (суббота )</div>
+            <div class="teams">
+                <span class="team">ВГУ-Реакция</span>
+                <span class="vs">vs</span>
+                <span class="team">КАТ</span>
+            </div>
+            <div class="location">Октябрьский пр-т 133 (ВГАТУ)</div>
+        </div>
+        <div class="score">92-89</div>
+    </div>
+    
+    <div class="game-card old-game league-a-game">
+        <div class="game-info">
+            <div class="game-date">11.10 16:15 (суббота )</div>
+            <div class="teams">
+                <span class="team">Салют</span>
+                <span class="vs">vs</span>
+                <span class="team">Факел</span>
+            </div>
+            <div class="location">Р.Ердякова 23 (Олимпийский)</div>
+        </div>
+        <div class="score">92-49</div>
+    </div>
+    
+    <div class="game-card old-game wligue-game">
+        <div class="game-info">
+            <div class="game-date">12.10 14:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">Вятка</span>
+                <span class="vs">vs</span>
+                <span class="team">Весна 45</span>
+            </div>
+            <div class="location">Солнечная 13 (КСК)</div>
+        </div>
+        <a href="https://drive.google.com/file/d/1kSRka7nGjsA8LBNbPEsJcBbT2dv6P8_3/view?usp=sharing" target="_blank" class="score-link"><div class="score clickable-score">64-80</div></a>
+    </div>
+    
+    <div class="game-card old-game league-b-game">
+        <div class="game-info">
+            <div class="game-date">12.10 14:30 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">Кирс-Драгонс</span>
+                <span class="vs">vs</span>
+                <span class="team">КПиАС</span>
+            </div>
+            <div class="location">Октябрьский пр-т 133 (ВГАТУ)</div>
+        </div>
+        <div class="score">97-27</div>
+    </div>
+    
+    <div class="game-card old-game league-b-game">
+        <div class="game-info">
+            <div class="game-date">12.10 16:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">Вятские Рыси</span>
+                <span class="vs">vs</span>
+                <span class="team">Котельнич</span>
+            </div>
+            <div class="location">Октябрьский пр-т 133 (ВГАТУ)</div>
+        </div>
+        <div class="score">83-63</div>
+    </div>
+    
+    <div class="game-card old-game league-a-game">
+        <div class="game-info">
+            <div class="game-date">12.10 16:30 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">Праздник</span>
+                <span class="vs">vs</span>
+                <span class="team">СШ 11</span>
+            </div>
+            <div class="location">Солнечная 25В (СШ №1)</div>
+        </div>
+        <div class="score">89-26</div>
+    </div>
+    
+    <div class="game-card old-game wligue-game">
+        <div class="game-info">
+            <div class="game-date">12.10 19:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">Родина</span>
+                <span class="vs">vs</span>
+                <span class="team">ВГУ-2</span>
+            </div>
+            <div class="location">Орловская 12 (УСК)</div>
+        </div>
+        <div class="score">20-85</div>
+    </div>
+    
+    <div class="game-card old-game league-b-game">
+        <div class="game-info">
+            <div class="game-date">13.10 20:15 (понедельник)</div>
+            <div class="teams">
+                <span class="team">БК Отрыв</span>
+                <span class="vs">vs</span>
+                <span class="team">Формат</span>
+            </div>
+            <div class="location">Солнечная 13 (КСК)</div>
+        </div>
+        <div class="score">49-31</div>
+    </div>
+    
+    <div class="game-card old-game league-a-game">
+        <div class="game-info">
+            <div class="game-date">14.10 18:30 (вторник)</div>
+            <div class="teams">
+                <span class="team">СШ 09</span>
+                <span class="vs">vs</span>
+                <span class="team">СШ 11</span>
+            </div>
+            <div class="location">Солнечная 25В (СШ №1)</div>
+        </div>
+        <div class="score">63-42</div>
+    </div>
+    
+    <div class="game-card old-game league-b-game">
+        <div class="game-info">
+            <div class="game-date">15.10 20:15 (среда)</div>
+            <div class="teams">
+                <span class="team">Легион</span>
+                <span class="vs">vs</span>
+                <span class="team">ВГУ-2</span>
+            </div>
+            <div class="location">Солнечная 25В (СШ №1)</div>
+        </div>
+        <div class="score">61-52</div>
+    </div>
+    
+    <div class="game-card old-game league-a-game">
+        <div class="game-info">
+            <div class="game-date">18.10 13:00 (суббота )</div>
+            <div class="teams">
+                <span class="team">Лойно</span>
+                <span class="vs">vs</span>
+                <span class="team">КАТ</span>
+            </div>
+            <div class="location">Октябрьский пр-т 133 (ВГАТУ)</div>
+        </div>
+        <div class="score">66-80</div>
+    </div>
+    
+    <div class="game-card old-game league-a-game">
+        <div class="game-info">
+            <div class="game-date">18.10 14:30 (суббота )</div>
+            <div class="teams">
+                <span class="team">Праздник</span>
+                <span class="vs">vs</span>
+                <span class="team">ВГУ-Реакция</span>
+            </div>
+            <div class="location">Октябрьский пр-т 133 (ВГАТУ)</div>
+        </div>
+        <div class="score">76-85</div>
+    </div>
+    
+    <div class="game-card old-game league-a-game">
+        <div class="game-info">
+            <div class="game-date">18.10 18:30 (суббота )</div>
+            <div class="teams">
+                <span class="team">СШ 09</span>
+                <span class="vs">vs</span>
+                <span class="team">ВГЭК</span>
+            </div>
+            <div class="location">Солнечная 25В (СШ №1)</div>
+        </div>
+        <div class="score">87-41</div>
+    </div>
+    
+    <div class="game-card old-game mlbl-game">
+        <div class="game-info">
+            <div class="game-date">18.10 20:15 (суббота )</div>
+            <div class="teams">
+                <span class="team">Железно-Хлынов</span>
+                <span class="vs">vs</span>
+                <span class="team">Уралхим</span>
+            </div>
+            <div class="location">Солнечная 25В (СШ №1)</div>
+        </div>
+        <div class="score">86-64</div>
+    </div>
+    
+    <div class="game-card old-game league-b-game">
+        <div class="game-info">
+            <div class="game-date">19.10 14:30 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">Легион</span>
+                <span class="vs">vs</span>
+                <span class="team">БК Котельнич</span>
+            </div>
+            <div class="location">Октябрьский пр-т 133 (ВГАТУ)</div>
+        </div>
+        <div class="score">86-84</div>
+    </div>
+    
+    <div class="game-card old-game wligue-game">
+        <div class="game-info">
+            <div class="game-date">19.10 17:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">Родина</span>
+                <span class="vs">vs</span>
+                <span class="team">Форс-Мажор</span>
+            </div>
+            <div class="location">Пр-т Гагарина 27 (Слободской) (Красный Якорь)</div>
+        </div>
+        <div class="score">30-91</div>
+    </div>
+    
+    <div class="game-card old-game wligue-game">
+        <div class="game-info">
+            <div class="game-date">19.10 17:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">ВГУ-Пушка</span>
+                <span class="vs">vs</span>
+                <span class="team">Вятка</span>
+            </div>
+            <div class="location">Орловская 12 (УСК)</div>
+        </div>
+        <div class="score">82-41</div>
+    </div>
+    
+    <div class="game-card old-game wligue-game">
+        <div class="game-info">
+            <div class="game-date">19.10 19:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">Весна 45</span>
+                <span class="vs">vs</span>
+                <span class="team">ВГУ-2</span>
+            </div>
+            <div class="location">Орловская 12 (УСК)</div>
+        </div>
+        <div class="score">70-60</div>
+    </div>
+    
+    <div class="game-card old-game league-a-game">
+        <div class="game-info">
+            <div class="game-date">20.10 20:15 (понедельник)</div>
+            <div class="teams">
+                <span class="team">Факел</span>
+                <span class="vs">vs</span>
+                <span class="team">Ветераны ВГСХА</span>
+            </div>
+            <div class="location">К.Маркса 115 (КЛПК)</div>
+        </div>
+        <div class="score">48-52</div>
+    </div>
+    
+    <div class="game-card old-game league-b-game">
+        <div class="game-info">
+            <div class="game-date">20.10 20:15 (понедельник)</div>
+            <div class="teams">
+                <span class="team">БК Отрыв</span>
+                <span class="vs">vs</span>
+                <span class="team">КПиАС</span>
+            </div>
+            <div class="location">Солнечная 13 (КСК)</div>
+        </div>
+        <div class="score">91-41</div>
+    </div>
+    
+    <div class="game-card old-game league-a-game">
+        <div class="game-info">
+            <div class="game-date">21.10 20:15 (вторник)</div>
+            <div class="teams">
+                <span class="team">ВГЭК</span>
+                <span class="vs">vs</span>
+                <span class="team">СШ 11</span>
+            </div>
+            <div class="location">Солнечная 25В (СШ №1)</div>
+        </div>
+        <div class="score">56-43</div>
+    </div>
+    
+    <div class="game-card old-game wligue-game">
+        <div class="game-info">
+            <div class="game-date">26.10 14:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">Вятка</span>
+                <span class="vs">vs</span>
+                <span class="team">Родина</span>
+            </div>
+            <div class="location">Солнечная 13 (КСК)</div>
+        </div>
+        <div class="score">39-27</div>
+    </div>
+    
+    <div class="game-card old-game league-b-game">
+        <div class="game-info">
+            <div class="game-date">26.10 16:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">БК Отрыв</span>
+                <span class="vs">vs</span>
+                <span class="team">Вятские Рыси</span>
+            </div>
+            <div class="location">Октябрьский пр-т 133 (ВГАТУ)</div>
+        </div>
+        <div class="score">64-76</div>
+    </div>
+    
+    <div class="game-card old-game league-a-game">
+        <div class="game-info">
+            <div class="game-date">26.10 17:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">СШ 09</span>
+                <span class="vs">vs</span>
+                <span class="team">ВГУ-Реакция</span>
+            </div>
+            <div class="location">Солнечная 25В (СШ №1)</div>
+        </div>
+        <div class="score">82-65</div>
+    </div>
+    
+    <div class="game-card old-game wligue-game">
+        <div class="game-info">
+            <div class="game-date">26.10 19:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">ВГУ-2</span>
+                <span class="vs">vs</span>
+                <span class="team">Форс-Мажор</span>
+            </div>
+            <div class="location">Пр-т Гагарина 27 (Слободской) (Красный Якорь)</div>
+        </div>
+        <div class="score">50-64</div>
+    </div>
+    
+    <div class="game-card old-game league-b-game">
+        <div class="game-info">
+            <div class="game-date">27.10 20:15 (понедельник)</div>
+            <div class="teams">
+                <span class="team">Формат</span>
+                <span class="vs">vs</span>
+                <span class="team">КПиАС</span>
+            </div>
+            <div class="location">Солнечная 25В (СШ №1)</div>
+        </div>
+        <div class="score">65-26</div>
+    </div>
+    
+    <div class="game-card old-game league-a-game">
+        <div class="game-info">
+            <div class="game-date">27.10 20:15 (понедельник)</div>
+            <div class="teams">
+                <span class="team">Факел</span>
+                <span class="vs">vs</span>
+                <span class="team">КАТ</span>
+            </div>
+            <div class="location">К.Маркса 115 (КЛПК)</div>
+        </div>
+        <div class="score">70-63</div>
+    </div>
+    
+    <div class="game-card old-game league-b-game">
+        <div class="game-info">
+            <div class="game-date">29.10 20:15 (среда)</div>
+            <div class="teams">
+                <span class="team">БК Отрыв</span>
+                <span class="vs">vs</span>
+                <span class="team">Легион</span>
+            </div>
+            <div class="location">Солнечная 25В (СШ №1)</div>
+        </div>
+        <div class="score">57-60</div>
+    </div>
+    
+    <div class="game-card old-game mlbl-game">
+        <div class="game-info">
+            <div class="game-date">30.10 20:15 (четверг)</div>
+            <div class="teams">
+                <span class="team">Чайка</span>
+                <span class="vs">vs</span>
+                <span class="team">Кор.Гиги</span>
+            </div>
+            <div class="location">Солнечная 13 (КСК)</div>
+        </div>
+        <div class="score">60-67</div>
+    </div>
+    
+            </div>
+        </div>
+        <div class="games-list">
+    <div class="game-card mlbl-game">
+        <div class="game-info">
+            <div class="game-date">06.11 20:15 (четверг)</div>
+            <div class="teams">
+                <span class="team">Чайка</span>
+                <span class="vs">vs</span>
+                <span class="team">Уралхим</span>
+            </div>
+            <div class="location">Солнечная 13 (КСК)</div>
+        </div>
+        <div class="score-placeholder">Скоро</div>
+    </div>
+    
+    <div class="game-card mlbl-game">
+        <div class="game-info">
+            <div class="game-date">08.11 13:00 (суббота)</div>
+            <div class="teams">
+                <span class="team">ESTET</span>
+                <span class="vs">vs</span>
+                <span class="team">Уралхим</span>
+            </div>
+            <div class="location">Октябрьский пр-т 133 (ВГАТУ)</div>
+        </div>
+        <div class="score-placeholder">Скоро</div>
+    </div>
+    
+    <div class="game-card wligue-game">
+        <div class="game-info">
+            <div class="game-date">08.11 14:30 (суббота)</div>
+            <div class="teams">
+                <span class="team">Родина</span>
+                <span class="vs">vs</span>
+                <span class="team">Весна 45</span>
+            </div>
+            <div class="location">Октябрьский пр-т 133 (ВГАТУ)</div>
+        </div>
+        <div class="score-placeholder">Скоро</div>
+    </div>
+    
+    <div class="game-card league-a-game">
+        <div class="game-info">
+            <div class="game-date">08.11 16:15 (суббота)</div>
+            <div class="teams">
+                <span class="team">Салют</span>
+                <span class="vs">vs</span>
+                <span class="team">СШ 11</span>
+            </div>
+            <div class="location">Р.Ердякова 23 (Олимпийский)</div>
+        </div>
+        <div class="score-placeholder">Скоро</div>
+    </div>
+    
+    <div class="game-card league-b-game">
+        <div class="game-info">
+            <div class="game-date">08.11 18:30 (суббота)</div>
+            <div class="teams">
+                <span class="team">СШ 10</span>
+                <span class="vs">vs</span>
+                <span class="team">КПиАС</span>
+            </div>
+            <div class="location">Солнечная 25В (СШ №1)</div>
+        </div>
+        <div class="score-placeholder">Скоро</div>
+    </div>
+    
+    <div class="game-card league-b-game">
+        <div class="game-info">
+            <div class="game-date">09.11 11:30 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">ВГУ-2</span>
+                <span class="vs">vs</span>
+                <span class="team">БК Котельнич</span>
+            </div>
+            <div class="location">Октябрьский пр-т 133 (ВГАТУ)</div>
+        </div>
+        <div class="score-placeholder">Скоро</div>
+    </div>
+    
+    <div class="game-card league-a-game">
+        <div class="game-info">
+            <div class="game-date">09.11 13:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">ВГЭК</span>
+                <span class="vs">vs</span>
+                <span class="team">ВГУ-Реакция</span>
+            </div>
+            <div class="location">Октябрьский пр-т 133 (ВГАТУ)</div>
+        </div>
+        <div class="score-placeholder">Скоро</div>
+    </div>
+    
+    <div class="game-card league-b-game">
+        <div class="game-info">
+            <div class="game-date">09.11 14:30 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">БК Отрыв</span>
+                <span class="vs">vs</span>
+                <span class="team">Кирс-Драгонс</span>
+            </div>
+            <div class="location">Октябрьский пр-т 133 (ВГАТУ)</div>
+        </div>
+        <div class="score-placeholder">Скоро</div>
+    </div>
+    
+    <div class="game-card league-b-game">
+        <div class="game-info">
+            <div class="game-date">09.11 16:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">Формат</span>
+                <span class="vs">vs</span>
+                <span class="team">Вятские Рыси</span>
+            </div>
+            <div class="location">Октябрьский пр-т 133 (ВГАТУ)</div>
+        </div>
+        <div class="score-placeholder">Скоро</div>
+    </div>
+    
+    <div class="game-card league-a-game">
+        <div class="game-info">
+            <div class="game-date">09.11 18:30 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">СШ 09</span>
+                <span class="vs">vs</span>
+                <span class="team">Лойно</span>
+            </div>
+            <div class="location">Солнечная 25В (СШ №1)</div>
+        </div>
+        <div class="score-placeholder">Скоро</div>
+    </div>
+    
+    <div class="game-card league-a-game">
+        <div class="game-info">
+            <div class="game-date">09.11 20:15 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">Ветераны ВГСХА</span>
+                <span class="vs">vs</span>
+                <span class="team">КАТ</span>
+            </div>
+            <div class="location">Солнечная 25В (СШ №1)</div>
+        </div>
+        <div class="score-placeholder">Скоро</div>
+    </div>
+    
+    <div class="game-card league-a-game">
+        <div class="game-info">
+            <div class="game-date">10.11 20:15 (понедельник)</div>
+            <div class="teams">
+                <span class="team">Факел</span>
+                <span class="vs">vs</span>
+                <span class="team">Праздник</span>
+            </div>
+            <div class="location">К.Маркса 115 (КЛПК)</div>
+        </div>
+        <div class="score-placeholder">Скоро</div>
+    </div>
+    
+    <div class="game-card mlbl-game">
+        <div class="game-info">
+            <div class="game-date">15.11 13:00 (суббота)</div>
+            <div class="teams">
+                <span class="team">Кор.Гиги</span>
+                <span class="vs">vs</span>
+                <span class="team">ESTET</span>
+            </div>
+            <div class="location">Октябрьский пр-т 133 (ВГАТУ)</div>
+        </div>
+        <div class="score-placeholder">Скоро</div>
+    </div>
+    
+    <div class="game-card league-a-game">
+        <div class="game-info">
+            <div class="game-date">15.11 14:30 (суббота)</div>
+            <div class="teams">
+                <span class="team">Лойно</span>
+                <span class="vs">vs</span>
+                <span class="team">Ветераны ВГСХА</span>
+            </div>
+            <div class="location">Октябрьский пр-т 133 (ВГАТУ)</div>
+        </div>
+        <div class="score-placeholder">Скоро</div>
+    </div>
+    
+    <div class="game-card league-a-game">
+        <div class="game-info">
+            <div class="game-date">15.11 16:15 (суббота)</div>
+            <div class="teams">
+                <span class="team">Салют</span>
+                <span class="vs">vs</span>
+                <span class="team">Ветераны ВГСХА</span>
+            </div>
+            <div class="location">Р.Ердякова 23 (Олимпийский)</div>
+        </div>
+        <div class="score-placeholder">Скоро</div>
+    </div>
+    
+    <div class="game-card league-b-game">
+        <div class="game-info">
+            <div class="game-date">16.11 16:00 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">Кирс-Драгонс</span>
+                <span class="vs">vs</span>
+                <span class="team">Вятские Рыси</span>
+            </div>
+            <div class="location">Октябрьский пр-т 133 (ВГАТУ)</div>
+        </div>
+        <div class="score-placeholder">Скоро</div>
+    </div>
+    
+    <div class="game-card league-b-game">
+        <div class="game-info">
+            <div class="game-date">16.11 18:30 (воскресенье)</div>
+            <div class="teams">
+                <span class="team">СШ 10</span>
+                <span class="vs">vs</span>
+                <span class="team">ВГУ-2</span>
+            </div>
+            <div class="location">Солнечная 25В (СШ №1)</div>
+        </div>
+        <div class="score-placeholder">Скоро</div>
+    </div>
+    </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript для сворачивания/разворачивания архива
+        document.addEventListener('DOMContentLoaded', function() {
+            const archiveHeader = document.querySelector('.archive-header');
+            const content = document.getElementById('archiveContent');
+            
+            if (archiveHeader && content) {
+                // По умолчанию архив свернут
+                content.style.display = 'none';
+                
+                // Вешаем обработчик на всю плашку
+                archiveHeader.addEventListener('click', function() {
+                    const toggle = this.querySelector('.archive-toggle');
+                    if (content.style.display === 'none') {
+                        content.style.display = 'block';
+                        toggle.textContent = '▼';
+                    } else {
+                        content.style.display = 'none';
+                        toggle.textContent = '▶';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

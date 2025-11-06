@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ФБКО</title>
+    <link rel="stylesheet" href="styles/base_style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">ФБКО</h1>
+            <h2 class="subtitle">Расписание и турнирные таблицы</h2>
+        </div>
+        
+        <div class="leagues-grid">
+            <a href="wligue.html" class="league-card w-ligue">
+                <div class="league-icon">🏆</div>
+                <h2 class="league-name">W-LIGUE</h2>
+                <p class="league-description">Женская баскетбольная лига с прекрасными командам, где каждая стремится к победе, а зрители наслаждаются яркими моментами. Эмоциональные матчи, красивая игра и неожиданные решения.</p>
+            </a>
+
+            <a href="religuea.html" class="league-card league-a">
+                <div class="league-icon">⚔️</div>
+                <h2 class="league-name">ЛИГА РАЗВИТИЯ (А)</h2>
+                <p class="league-description">Мужская лига с бойцовскими командами и упорной борьбой. Тактические дуэли, волевые качества и характер победителей.</p>
+            </a>
+
+            <a href="religueb.html" class="league-card league-b">
+                <div class="league-icon">🛡️</div>
+                <h2 class="league-name">ЛИГА РАЗВИТИЯ (Б)</h2>
+                <p class="league-description">Мужская лига с сильными командами и жесткой конкуренцией. Железная защита, быстрые контратаки и волевые победы.</p>
+            </a>
+			
+			<a href="mlbl.html" class="league-card mlbl"> 
+                <div class="league-icon">💙</div>
+                <h2 class="league-name">МЛБЛ</h2>
+                <p class="league-description">Всероссийские соревнования среди сильнейших любительских команд. Высокий уровень организации, профессиональный подход и бескомпромиссная борьба за чемпионство.</p>
+            </a>
+        </div>
+
+        <!-- Сводное расписание -->
+        <div class="combined-schedule-section">
+            <h2 class="combined-schedule-title">Сводное расписание всех лиг</h2>
+            {{SCHEDULE_CONTENT}}
+        </div>
+    </div>
+
+    <script>
+        // JavaScript для сворачивания/разворачивания архива
+        document.addEventListener('DOMContentLoaded', function() {
+            const archiveHeader = document.querySelector('.archive-header');
+            const content = document.getElementById('archiveContent');
+            
+            if (archiveHeader && content) {
+                // По умолчанию архив свернут
+                content.style.display = 'none';
+                
+                // Вешаем обработчик на всю плашку
+                archiveHeader.addEventListener('click', function() {
+                    const toggle = this.querySelector('.archive-toggle');
+                    if (content.style.display === 'none') {
+                        content.style.display = 'block';
+                        toggle.textContent = '▼';
+                    } else {
+                        content.style.display = 'none';
+                        toggle.textContent = '▶';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

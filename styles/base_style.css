@@ -35,6 +35,16 @@ body::before {
     margin: 0 auto;
     position: relative;
     z-index: 1;
+	
+	   /* Стиль подложки как у subtitle-overlay */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    margin-bottom: 20px;
 }
 
 .header {
@@ -77,13 +87,13 @@ body::before {
     text-align: center;
     backdrop-filter: blur(5px);
     height: 100%;
-    min-height: 380px;
+    min-height: 130px;
     max-width: 280px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    aspect-ratio: 2/3;
+    aspect-ratio: 3/4;
 }
 
 .league-card:hover {
@@ -327,6 +337,100 @@ body::before {
 
 .archive-content {
     transition: all 0.3s ease;
+}
+
+/* Стили для логотипа */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-logo {
+    max-width: 800px; /* Еще больше */
+    width: 100%;
+    height: auto;
+    max-height: 250px; /* Увеличиваем максимальную высоту */
+    object-fit: contain;
+    filter: drop-shadow(2px 2px 8px rgba(0,0,0,0.3));
+}
+
+.subtitle-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #303030;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+    width: 90%;
+    text-align: center;
+    padding: 15px 20px; /* Уменьшаем отступы */
+    border-radius: 12px;
+    
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+    /* Более сильная белая обводка */
+    text-shadow: 
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 6px rgba(255, 255, 255, 0.7),
+        0 0 8px rgba(255, 255, 255, 0.5),
+        0 2px 3px rgba(0, 0, 0, 0.3);
+    
+    /* Добавляем перенос слов */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.2; /* Уменьшаем межстрочный интервал */
+}
+
+
+/* Убираем старый подзаголовок */
+.subtitle {
+    display: none;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .main-logo {
+        max-width: 500px;
+        max-height: 180px;
+    }
+    
+    .subtitle-overlay {
+        font-size: 1.4rem;
+        padding: 12px 15px;
+        width: 85%;
+        line-height: 1.1;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-logo {
+        max-width: 400px;
+        max-height: 150px;
+    }
+    
+    .subtitle-overlay {
+        font-size: 1.2rem;
+        padding: 10px 12px;
+        width: 80%;
+        line-height: 1.1;
+        white-space: normal;
+        word-break: keep-all;
+    }
 }
 
 /* Адаптивность для карточек игр */
